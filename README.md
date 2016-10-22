@@ -1,22 +1,39 @@
 
 # Frontend Developer Test
 
-Please fork this repository to begin your front end developer test, then download your repository and follow the installation instructions.
+####What URL should be used to access your application?
+http://localhost:8888
 
-# Installation
-Installation requires node.js on your computer
+As I have used Bower as the package manager for frontend dependencies. 
+Before running the node server, please ensure Bower is installed and run bower install command inside public directory to install the front end dependencies.
 
-npm install
 
-node server.js
+####What libraries did you use to write your application?
 
-# Instructions
-There should now be a web server running at http://localhost:8888
-Follow the instructions displayed on that webpage.
+angularJS and bootstrapJS
 
-The node server provides everything you need for the back end of the test. You are welcome to look at the server code, but you should not need to modify anything to make your front end work. All of your code should be placed in the public directory in this project. The node server will act as the web server for your front end application.
+####What influenced the design of your user interface?
 
-Please insure that your code runs properly with the node server. Test all the features and make sure that no Javascript errors are generated.
+Tried to create a simple & self explainatory User Interface so that end user can access the required information in very less number of steps.
+
+
+####What steps did you take to make your application user friendly?
+
+Type ahead text box has been used to predict state abbrevations.
+input validations has been used in login and Guestbook pages. 
+
+
+####What steps did you take to insure your application was secure?
+
+
+As of now nothing has been implemented to ensure the security.
+
+####What could be done to the front end or back end to make it more secure?
+
+
+1. User details/credentials has to be stroed in the encrypted form
+2. We can use https calls to server in case of sensitive information
+
 
 Thank you
 

@@ -1,0 +1,25 @@
+{
+  "name": "frontend-test",
+  "version": "0.0.0",
+  "homepage": "https://github.com/subin-paul/frontend-test",
+  "authors": [
+    "subin-paul <go4subin@gmail.com>"
+  ],
+  "description": "frontend implementation of the requirement",
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.5",
+    "angular-bootstrap": "~0.13.4",
+    "angular-cookies": "~1.4.5",
+    "angular-route": "~1.4.5",
+    "bootstrap": "~3.3.5"
+  }
+}

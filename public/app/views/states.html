@@ -1,0 +1,140 @@
+
+<div class="page-header">
+  <h1>State Details</h1>
+</div>
+<div class="well">
+	<div class="row">
+
+		<div class="col-md-12">
+
+			<div class="row">
+				<div class="col-md-4"><!--Left Pane-->
+					<h5>Enter state code to search:</h5>
+					<input type="text" ng-model="selected" typeahead="state for state in stateAbbrevations | filter:$viewValue | limitTo:8" class="form-control"
+					typeahead-editable="false"
+					typeahead-on-select="onSelect($item, $model, $label)">
+				</div><!--End of Left Pane -->
+				<div class="col-md-2"></div>
+				<div class="col-md-6"><!--right pane-->
+					<div class="container" ng-if=stateDescription>
+
+
+						<div class="row"> <!--heading-->
+							<div class="col-md-4">
+								<h3>{{stateAbbrevationDetails.name}}</h3>
+							</div>
+
+							<div class="col-md-4">
+							</div>
+
+						</div><!-- end of heading-->
+
+
+						<div class="row"><!-- level 1-->
+							<div class="col-md-4">
+								<span>Abbrevation:</span>
+								<b>{{stateAbbrevationDetails.abbreviation}}</b>	
+							</div>
+							<div class="col-md-4">
+								<span>capital:</span>
+								<b>{{stateAbbrevationDetails.capital}}</b>
+							</div>
+						</div> <!-- End of level 1-->
+
+
+						<div class="row"> <!-- level 2-->
+
+							<div class="col-md-4">
+								<span>Most Populous City:</span>
+								<b>{{stateAbbrevationDetails['most-populous-city']}}</b>
+							</div>
+							<div class="col-md-4">
+								<span>Population:</span>
+								<b>{{stateAbbrevationDetails.population}}</b>
+							</div>
+						</div> <!-- End of level 2-->
+		
+
+
+						<div class="row"> <!-- level 3-->
+							<div class="col-md-4">
+								<span>Square Miles:</span>
+								<b>{{stateAbbrevationDetails['square-miles']}}</b>
+							</div>
+							<div class="col-md-4">
+								<span>Time zone 1:</span>
+								<b>{{stateAbbrevationDetails['time-zone-1']}}</b>
+							</div>
+						</div> <!-- End of level 3-->
+
+						<div class="row"><!-- Level 4-->
+							<div class="col-md-4">
+								<span>Time zone 2:</span>
+								<b>{{stateAbbrevationDetails['time-zone-2']}}</b>
+							</div>
+							<div class="col-md-4">
+								<span>DST:</span>
+								<b>{{stateAbbrevationDetails.dst}}</b>
+							</div>
+						</div> <!-- End of level 3-->
+					</div>
+				</div><!-- End of right pane-->
+			</div>
+		</div>
+	</div>
+</div>
+<h4>Browse through the states</h4>
+<div class="table-responsive">
+<table class="table">
+	<tr>
+		<th>Name</th>
+		<th>abbreviation</th>
+		<th>capital</th>
+		<th>most-populous-city</th>
+		<th>population</th>
+		<th>square-miles</th>
+		<th>time-zone-1</th>
+		<th>time-zone-2</th>
+		<th>dst</th>
+	</tr>
+
+	<tr ng-repeat="state in states">
+		<td>{{state.name}}
+		</td>
+
+		<td>{{state.abbreviation}}
+		</td>
+		<td>{{state.capital}}
+		</td>
+		<td>{{state['most-populous-city']}}
+		</td>
+		<td>{{state.population}}
+		</td>
+		<td>{{state['square-miles']}}
+		</td>
+		<td>{{state['time-zone-1']}}
+		</td>
+		<td>{{state['time-zone-2']}}
+		</td>
+		<td>{{state.dst}}
+		</td>
+	</tr>
+
+</table>
+</div>
+<div class="container-fluid">
+<div class="row">
+ <div class="col-md-10">
+
+	<nav>
+	  <ul class="pager">
+	    <li class="previous"><a ng-click="previousStates()" style="cursor: pointer;"><span aria-hidden="true">&larr;</span> Previous </a></li>
+	    <li class="next"><a ng-click="nextStates()" style="cursor: pointer;"> Next<span aria-hidden="true">&rarr;</span></a></li>
+	  </ul>
+	</nav>
+ </div>
+ <div class="col-md-2 "><button type="button" class="btn btn-primary pull-right" ng-click="toggleSort()">Toggle Sort</button></div>
+</div>
+</div>
+
+
